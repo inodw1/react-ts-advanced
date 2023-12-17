@@ -29,7 +29,15 @@ function App() {
                 </Button>
             </p>
 
-            <Container as={Button}>Click me!</Container>
+            <Container
+                as={Button}
+                type="button"
+                onClick={() => {
+                    console.log("[iw] Clicked! ---> ");
+                }}
+            >
+                Click me!
+            </Container>
         </main>
     );
 }
