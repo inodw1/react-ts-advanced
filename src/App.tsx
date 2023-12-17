@@ -1,6 +1,7 @@
 import React from "react";
 import Input from "./component/input.tsx";
 import Button from "./component/button.tsx";
+import Container from "./component/Container.tsx";
 
 function App() {
     return (
@@ -27,6 +28,8 @@ function App() {
                     A link
                 </Button>
             </p>
+
+            <Container as={Button}>Click me!</Container>
         </main>
     );
 }
