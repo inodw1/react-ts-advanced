@@ -1,15 +1,15 @@
-import React from "react";
+import React, { type ComponentPropsWithoutRef } from "react";
 
-interface InputProps {
+type InputProps = {
     id: string;
     label: string;
-}
+} & ComponentPropsWithoutRef<"input">;
 
-const Input = ({ id, label }: InputProps) => {
+const Input = ({ id, label, ...props }: InputProps) => {
     return (
         <p>
             <label htmlFor={id}>{label}</label>
-            <input id={id} type="texts" />
+            <input id={id} {...props} />
         </p>
     );
 };
