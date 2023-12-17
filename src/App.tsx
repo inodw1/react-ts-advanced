@@ -9,11 +9,18 @@ function App() {
             <Input id="age" label="Your age" type="number" />
 
             <p>
-                <Button el="button">A Button</Button>
+                {/* <Button el="button">A Button</Button> */}
+                <Button>A Button</Button>
             </p>
             <p>
-                <Button
+                {/* <Button
                     el="anchor"
+                    href="https://inod-wagachchi.netlify.app/"
+                    target="blank"
+                >
+                    A link
+                </Button> */}
+                <Button
                     href="https://inod-wagachchi.netlify.app/"
                     target="blank"
                 >
