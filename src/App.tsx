@@ -1,7 +1,7 @@
 import React from "react";
 import Input from "./component/input.tsx";
 import Button from "./component/button.tsx";
-import Container from "./component/Container.tsx";
+import Container from "./component/container.tsx";
 
 function App() {
     return (
