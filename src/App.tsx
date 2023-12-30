@@ -2,44 +2,23 @@ import React, { useRef } from "react";
 import Input from "./component/input.tsx";
 import Button from "./component/button.tsx";
 import Container from "./component/container.tsx";
+import Form from "./component/form.tsx";
 
 function App() {
-    const inputRef = useRef<HTMLInputElement>(null);
+    // const inputRef = useRef<HTMLInputElement>(null);
+    const handleSave = (data: unknown) => {
+        const extractedData = data as { name: string; age: string };
+        console.log("extractedData: ", extractedData);
+    };
     return (
         <main>
-            <Input id="name" label="Your name" type="text" />
-            <Input id="age" label="Your age" type="number" />
-            <Input id="test" label="Test" type="text" ref={inputRef} />
-
-            <p>
-                {/* <Button el="button">A Button</Button> */}
-                <Button>A Button</Button>
-            </p>
-            <p>
-                {/* <Button
-                    el="anchor"
-                    href="https://inod-wagachchi.netlify.app/"
-                    target="blank"
-                >
-                    A link
-                </Button> */}
-                <Button
-                    href="https://inod-wagachchi.netlify.app/"
-                    target="blank"
-                >
-                    A link
-                </Button>
-            </p>
-
-            <Container
-                as={Button}
-                type="button"
-                onClick={() => {
-                    console.log("[iw] Clicked! ---> ");
-                }}
-            >
-                Click me!
-            </Container>
+            <Form onSave={handleSave}>
+                <Input id="name" label="Your name" type="text" />
+                <Input id="age" label="Your age" type="number" />
+                <p>
+                    <Button>Save</Button>
+                </p>
+            </Form>
         </main>
     );
 }
